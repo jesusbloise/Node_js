@@ -1,5 +1,6 @@
 // console.log("Hola Node Js");
 
+
 // const fecha = new Date()
 // console.log(fecha)
 
@@ -28,6 +29,18 @@
 // `
 // fs.writeFileSync('calculo.xls', calculo)
 
+// const fs = require('fs')
+// const tareas = [
+//     { text: 'Ir al gimnasio' },
+//     { text: 'Buscar al niño al colegio' },
+//     { text: 'Pagar los gastos comunes' },
+//     { text: 'Cargar bencina' },
+//     { text: 'Pagar los gastos comunes' },
+//     { text: 'Cargar bencina' }
+// ]
+// fs.writeFileSync('tareas.json', JSON.stringify(tareas) )
+
+
 const fs = require('fs')
 const tareas = [
     { text: 'Ir al gimnasio' },
@@ -37,4 +50,11 @@ const tareas = [
     { text: 'Pagar los gastos comunes' },
     { text: 'Cargar bencina' }
 ]
-fs.writeFileSync('tareas.json', JSON.stringify(tareas) )
+fs.readFileSync('tareas.json', 'utf8' )
+
+console.log(tareas)
+
+const { saludar, darLasGracias } = require ('./modales.js')
+
+saludar('jesus')
+darLasGracias('jose')
